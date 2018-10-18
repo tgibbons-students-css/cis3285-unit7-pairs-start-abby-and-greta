@@ -19,6 +19,7 @@ namespace Domain
             get;
             set;
         }
+
         /// <summary>
         /// Used to add a deposit or subtract a withdrawal from
         /// the account. Withdrawals will have negative amount
@@ -32,7 +33,6 @@ namespace Domain
         /// <param name="amount"></param>
         /// <returns></returns>
         int CalculateRewardPoints(decimal amount);
-
 
     }
 }

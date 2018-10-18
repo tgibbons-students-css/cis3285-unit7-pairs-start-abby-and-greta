@@ -40,8 +40,10 @@ namespace AccountsForms
         {
             string accName = listBoxAccounts.SelectedItem.ToString();
             decimal balance = accService.GetAccountBalance(accName);
+            decimal rewardPoints = accService.GetRewardPoints(accName);
 
             txtBalance.Text = balance.ToString();
+            txtRewardPoints.Text = rewardPoints.ToString();
         }
     }
 }

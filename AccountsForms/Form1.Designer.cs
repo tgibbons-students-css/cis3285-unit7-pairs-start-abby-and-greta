@@ -41,6 +41,8 @@
             this.btnWithDrawal = new System.Windows.Forms.Button();
             this.txtWithdrawalAmount = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblRewardPoints = new System.Windows.Forms.Label();
+            this.txtRewardPoints = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtAccountName
@@ -154,11 +156,29 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Wells Fargo Account Creator";
             // 
+            // lblRewardPoints
+            // 
+            this.lblRewardPoints.AutoSize = true;
+            this.lblRewardPoints.Location = new System.Drawing.Point(466, 74);
+            this.lblRewardPoints.Name = "lblRewardPoints";
+            this.lblRewardPoints.Size = new System.Drawing.Size(76, 13);
+            this.lblRewardPoints.TabIndex = 13;
+            this.lblRewardPoints.Text = "Reward Points";
+            // 
+            // txtRewardPoints
+            // 
+            this.txtRewardPoints.Location = new System.Drawing.Point(469, 93);
+            this.txtRewardPoints.Name = "txtRewardPoints";
+            this.txtRewardPoints.Size = new System.Drawing.Size(100, 20);
+            this.txtRewardPoints.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 385);
+            this.Controls.Add(this.txtRewardPoints);
+            this.Controls.Add(this.lblRewardPoints);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtWithdrawalAmount);
             this.Controls.Add(this.btnWithDrawal);
@@ -194,6 +214,8 @@
         private System.Windows.Forms.Button btnWithDrawal;
         private System.Windows.Forms.TextBox txtWithdrawalAmount;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblRewardPoints;
+        private System.Windows.Forms.TextBox txtRewardPoints;
     }
 }
 

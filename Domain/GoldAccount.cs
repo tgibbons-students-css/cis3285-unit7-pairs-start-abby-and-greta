@@ -11,8 +11,9 @@ namespace Domain
         private const int GoldTransactionCostPerPoint = 5;
         private const int GoldBalanceCostPerPoint = 2000;
 
-        public decimal Balance { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int RewardPoints { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public decimal Balance { get; set; }
+        public int RewardPoints { get; set; }
+
 
         /// <summary>
         /// 1 point for each $5 deposited
