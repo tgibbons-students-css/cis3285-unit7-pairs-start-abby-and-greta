@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Domain
+{
+    public static class accountFactory
+    {
+        /// <summary>
+        /// Factory method to create the correct type of account
+        /// given the account type.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static iAccount CreateAccount(AccountType type)
+        {
+            iAccount account = null;
+            switch (type)
+            {
+                case AccountType.Silver:
+                    account = new SilverAccount();
+                    break;
+                case AccountType.Gold:
+                    account = new GoldAccount();
+                    break;
+                case AccountType.Platinum:
+                    account = new PlatinumAccount();
+                    break;
+            }
+            return account;
+        }
+    }
+}
