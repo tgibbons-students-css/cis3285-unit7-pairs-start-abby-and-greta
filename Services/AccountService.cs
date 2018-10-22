@@ -72,10 +72,11 @@ namespace Services
             acc.AddTransaction(-1*amount);
         }
         /// <summary>
-        /// Look up the account by name in the dictionar
+        /// Look up the account by name in the dictionary. If it does not exist, create and return a new
+        /// null account object.
         /// </summary>
         /// <param name="accountName"></param>
-        /// <returns>returns null if name not found</returns>
+        /// <returns>returns null account if name not found</returns>
         public iAccount FindAccount(string accountName)
         {
             if (accountsDictionary.ContainsKey(accountName))

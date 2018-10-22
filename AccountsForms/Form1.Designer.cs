@@ -179,7 +179,7 @@
             // lblRewardPoints
             // 
             this.lblRewardPoints.AutoSize = true;
-            this.lblRewardPoints.Location = new System.Drawing.Point(905, 142);
+            this.lblRewardPoints.Location = new System.Drawing.Point(892, 142);
             this.lblRewardPoints.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblRewardPoints.Name = "lblRewardPoints";
             this.lblRewardPoints.Size = new System.Drawing.Size(151, 25);
@@ -189,7 +189,7 @@
             // txtRewardPoints
             // 
             this.txtRewardPoints.Enabled = false;
-            this.txtRewardPoints.Location = new System.Drawing.Point(911, 179);
+            this.txtRewardPoints.Location = new System.Drawing.Point(898, 179);
             this.txtRewardPoints.Margin = new System.Windows.Forms.Padding(6);
             this.txtRewardPoints.Name = "txtRewardPoints";
             this.txtRewardPoints.Size = new System.Drawing.Size(196, 31);

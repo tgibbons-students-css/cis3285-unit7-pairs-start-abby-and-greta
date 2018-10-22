@@ -19,6 +19,8 @@ namespace AccountsForms
         public Form1()
         {
             InitializeComponent();
+
+            // Load the combo box with the list of account type enums
             comboAccountType.DataSource = Enum.GetValues(typeof(AccountType));
         }
 

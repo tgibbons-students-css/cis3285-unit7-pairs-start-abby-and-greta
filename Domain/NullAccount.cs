@@ -13,7 +13,7 @@ namespace Domain
         public int RewardPoints { get; set; }
 
         /// <summary>
-        /// 0 points
+        /// 0 points for a null account object
         /// </summary>
         /// <param name="amount"></param>
         /// <returns></returns>
@@ -22,6 +22,7 @@ namespace Domain
             return 0;
         }
 
+        // Do nothing for transactions in a null account object
         public void AddTransaction(decimal amount)
         {
 
