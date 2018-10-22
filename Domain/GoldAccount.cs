@@ -14,7 +14,6 @@ namespace Domain
         public decimal Balance { get; set; }
         public int RewardPoints { get; set; }
 
-
         /// <summary>
         /// 1 point for each $5 deposited
         /// 1 point for each $2,000 in account balance

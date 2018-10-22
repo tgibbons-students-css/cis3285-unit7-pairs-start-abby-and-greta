@@ -82,7 +82,7 @@ namespace Services
             {
                 return accountsDictionary[accountName];
             }
-            return null;
+            return new NullAccount();
         }
 
     }
