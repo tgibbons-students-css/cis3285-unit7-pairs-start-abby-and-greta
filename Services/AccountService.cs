@@ -76,7 +76,7 @@ namespace Services
         /// </summary>
         /// <param name="accountName"></param>
         /// <returns>returns null if name not found</returns>
-        private iAccount FindAccount(string accountName)
+        public iAccount FindAccount(string accountName)
         {
             if (accountsDictionary.ContainsKey(accountName))
             {

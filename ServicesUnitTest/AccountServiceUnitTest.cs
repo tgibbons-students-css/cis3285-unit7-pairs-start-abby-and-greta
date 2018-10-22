@@ -135,7 +135,7 @@ namespace ServicesUnitTest
             acctService.Deposit(accountName, 4000M);
             int points = acctService.GetRewardPoints(accountName);
             // Assert
-            Assert.AreEqual(points, 2000+4+2000);
+            Assert.AreEqual(points, 2000 + 4 + 2000);
         }
         [TestMethod]
         public void RewardPoints_Platinum_Withdrawal()
@@ -152,5 +152,36 @@ namespace ServicesUnitTest
             // Assert
             Assert.AreEqual(points, 2000 + 4 + 2000);
         }
+        [TestMethod]
+        public void Create_Account_Of_Selected_EnumType()
+        {
+            // Arrange
+            AccountService acctService = new AccountService();            
+            AccountType acctType = AccountType.Gold;
+
+            // Act
+            string accountName = "Testing_Enums_As_Parameters";
+            acctService.CreateAccount(accountName, acctType);
+            acctService.Deposit(accountName, 10M);
+
+            // Assert
+            Assert.AreEqual(acctService.GetRewardPoints(accountName), 2);
+        }
+
+        [TestMethod]
+        public void Balance_New_NullAccount()
+        {
+            // Arrange    
+            AccountService acctService = new AccountService();
+
+            // Act
+            string accountName = "MyTest";
+            acctService.CreateAccount(accountName, AccountType.Gold);
+            acctService.FindAccount("YourAccount");
+
+            // Assert
+            Assert.AreEqual(acctService.GetAccountBalance("YourAccount"), 0);
+        }
+
     }
 }

@@ -43,12 +43,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblRewardPoints = new System.Windows.Forms.Label();
             this.txtRewardPoints = new System.Windows.Forms.TextBox();
+            this.lblAccountType = new System.Windows.Forms.Label();
+            this.comboAccountType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtAccountName
             // 
-            this.txtAccountName.Location = new System.Drawing.Point(106, 98);
-            this.txtAccountName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtAccountName.Location = new System.Drawing.Point(106, 113);
+            this.txtAccountName.Margin = new System.Windows.Forms.Padding(6);
             this.txtAccountName.Name = "txtAccountName";
             this.txtAccountName.Size = new System.Drawing.Size(196, 31);
             this.txtAccountName.TabIndex = 0;
@@ -56,7 +58,7 @@
             // btnAddAccount
             // 
             this.btnAddAccount.Location = new System.Drawing.Point(106, 175);
-            this.btnAddAccount.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnAddAccount.Margin = new System.Windows.Forms.Padding(6);
             this.btnAddAccount.Name = "btnAddAccount";
             this.btnAddAccount.Size = new System.Drawing.Size(200, 44);
             this.btnAddAccount.TabIndex = 1;
@@ -69,16 +71,16 @@
             this.listBoxAccounts.FormattingEnabled = true;
             this.listBoxAccounts.ItemHeight = 25;
             this.listBoxAccounts.Location = new System.Drawing.Point(104, 315);
-            this.listBoxAccounts.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listBoxAccounts.Margin = new System.Windows.Forms.Padding(6);
             this.listBoxAccounts.Name = "listBoxAccounts";
-            this.listBoxAccounts.Size = new System.Drawing.Size(270, 279);
+            this.listBoxAccounts.Size = new System.Drawing.Size(427, 279);
             this.listBoxAccounts.TabIndex = 2;
             this.listBoxAccounts.SelectedIndexChanged += new System.EventHandler(this.listBoxAccounts_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 67);
+            this.label1.Location = new System.Drawing.Point(98, 82);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(200, 25);
@@ -99,7 +101,7 @@
             // 
             this.txtBalance.Enabled = false;
             this.txtBalance.Location = new System.Drawing.Point(649, 179);
-            this.txtBalance.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtBalance.Margin = new System.Windows.Forms.Padding(6);
             this.txtBalance.Name = "txtBalance";
             this.txtBalance.Size = new System.Drawing.Size(196, 31);
             this.txtBalance.TabIndex = 5;
@@ -116,16 +118,17 @@
             // 
             // txtDepositAmount
             // 
-            this.txtDepositAmount.Location = new System.Drawing.Point(682, 354);
-            this.txtDepositAmount.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDepositAmount.Location = new System.Drawing.Point(821, 335);
+            this.txtDepositAmount.Margin = new System.Windows.Forms.Padding(6);
             this.txtDepositAmount.Name = "txtDepositAmount";
             this.txtDepositAmount.Size = new System.Drawing.Size(196, 31);
             this.txtDepositAmount.TabIndex = 7;
             // 
             // btnDeposit
             // 
-            this.btnDeposit.Location = new System.Drawing.Point(510, 350);
-            this.btnDeposit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnDeposit.Enabled = false;
+            this.btnDeposit.Location = new System.Drawing.Point(649, 331);
+            this.btnDeposit.Margin = new System.Windows.Forms.Padding(6);
             this.btnDeposit.Name = "btnDeposit";
             this.btnDeposit.Size = new System.Drawing.Size(150, 44);
             this.btnDeposit.TabIndex = 8;
@@ -136,7 +139,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(682, 317);
+            this.label4.Location = new System.Drawing.Point(821, 298);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 25);
@@ -145,8 +148,8 @@
             // 
             // btnWithDrawal
             // 
-            this.btnWithDrawal.Location = new System.Drawing.Point(510, 408);
-            this.btnWithDrawal.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnWithDrawal.Location = new System.Drawing.Point(649, 389);
+            this.btnWithDrawal.Margin = new System.Windows.Forms.Padding(6);
             this.btnWithDrawal.Name = "btnWithDrawal";
             this.btnWithDrawal.Size = new System.Drawing.Size(150, 44);
             this.btnWithDrawal.TabIndex = 10;
@@ -156,8 +159,8 @@
             // 
             // txtWithdrawalAmount
             // 
-            this.txtWithdrawalAmount.Location = new System.Drawing.Point(688, 412);
-            this.txtWithdrawalAmount.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtWithdrawalAmount.Location = new System.Drawing.Point(827, 393);
+            this.txtWithdrawalAmount.Margin = new System.Windows.Forms.Padding(6);
             this.txtWithdrawalAmount.Name = "txtWithdrawalAmount";
             this.txtWithdrawalAmount.Size = new System.Drawing.Size(196, 31);
             this.txtWithdrawalAmount.TabIndex = 11;
@@ -187,16 +190,35 @@
             // 
             this.txtRewardPoints.Enabled = false;
             this.txtRewardPoints.Location = new System.Drawing.Point(911, 179);
-            this.txtRewardPoints.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtRewardPoints.Margin = new System.Windows.Forms.Padding(6);
             this.txtRewardPoints.Name = "txtRewardPoints";
             this.txtRewardPoints.Size = new System.Drawing.Size(196, 31);
             this.txtRewardPoints.TabIndex = 14;
+            // 
+            // lblAccountType
+            // 
+            this.lblAccountType.AutoSize = true;
+            this.lblAccountType.Location = new System.Drawing.Point(358, 82);
+            this.lblAccountType.Name = "lblAccountType";
+            this.lblAccountType.Size = new System.Drawing.Size(144, 25);
+            this.lblAccountType.TabIndex = 15;
+            this.lblAccountType.Text = "Account Type";
+            // 
+            // comboAccountType
+            // 
+            this.comboAccountType.FormattingEnabled = true;
+            this.comboAccountType.Location = new System.Drawing.Point(363, 113);
+            this.comboAccountType.Name = "comboAccountType";
+            this.comboAccountType.Size = new System.Drawing.Size(168, 33);
+            this.comboAccountType.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1192, 740);
+            this.ClientSize = new System.Drawing.Size(1192, 647);
+            this.Controls.Add(this.comboAccountType);
+            this.Controls.Add(this.lblAccountType);
             this.Controls.Add(this.txtRewardPoints);
             this.Controls.Add(this.lblRewardPoints);
             this.Controls.Add(this.label5);
@@ -212,7 +234,7 @@
             this.Controls.Add(this.listBoxAccounts);
             this.Controls.Add(this.btnAddAccount);
             this.Controls.Add(this.txtAccountName);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -237,6 +259,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblRewardPoints;
         private System.Windows.Forms.TextBox txtRewardPoints;
+        private System.Windows.Forms.Label lblAccountType;
+        private System.Windows.Forms.ComboBox comboAccountType;
     }
 }
 

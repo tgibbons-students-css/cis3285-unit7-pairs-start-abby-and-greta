@@ -19,21 +19,25 @@ namespace AccountsForms
         public Form1()
         {
             InitializeComponent();
+            comboAccountType.DataSource = Enum.GetValues(typeof(AccountType));
         }
 
         /// <summary>
-        /// Create a new account button. Only do so if the name of the account is not null or plain white space.
+        /// Create a new account button. Only do so if the name of the account is not null or plain white space and 
+        /// an account type is selected from the dropdown.
         /// Clear the text area when added. 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnAddAccount_Click_1(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtAccountName.Text))
+            if (!string.IsNullOrWhiteSpace(txtAccountName.Text) && (comboAccountType.SelectedIndex > -1))
             {
                 string accountName = txtAccountName.Text;
+                AccountType accountType = (AccountType)comboAccountType.SelectedItem;
+
                 listBoxAccounts.Items.Add(accountName);
-                accService.CreateAccount(accountName, AccountType.Silver);
+                accService.CreateAccount(accountName, accountType);
                 txtAccountName.ResetText();
             }
         }
@@ -105,5 +109,6 @@ namespace AccountsForms
             decimal rewardPoints = accService.GetRewardPoints(accName);
             txtRewardPoints.Text = rewardPoints.ToString();
         }
+
     }
 }
